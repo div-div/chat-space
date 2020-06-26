@@ -51,7 +51,7 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, foreign_key: true|
+|name|string|null: false|
 
 ### Association
 - has_many :groups_users
@@ -62,11 +62,10 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|message|integer|null: false|
 |body|text|
 |image|string|
-|user|string|null: false, foreign_key: true|
-|group|string|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 
 
 ### Association
