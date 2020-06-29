@@ -1,0 +1,22 @@
+.chat-main
+  .chat-main__group-info
+    .chat-main__name
+      techcamp
+      .chat-main__list
+        menber:
+        .chat-main__menber-name
+          chiaki
+
+    .chat-main__edit-btn
+      =link_to "#", class: "edit" do
+        Edit
+  .footer
+    .footer__message-window
+      .footer__form-window
+        type a message
+      %label{class: "image-label"}
+        =icon('far', 'image')
+        %input{type: "file"}
+      .footer__send-btn
+        =link_to "#", class: "Editlink" do
+          Send
