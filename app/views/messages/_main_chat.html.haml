@@ -1,0 +1,23 @@
+.chat-main
+  .chat-main__group-info
+    .group-name__main
+      techcamp
+      .menber-list
+        menber:
+        .menber-name
+          chiaki
+
+
+    .edit-btn
+      =link_to "#", class: "edit" do
+        Edit
+  .footer
+    .message-window
+      .form-window
+        type a message
+      %label{class: "image-label"}
+        =icon('far', 'image')
+        %input{type: "file"}
+      .send-btn
+        =link_to "#", class: "Editlink" do
+          Send
