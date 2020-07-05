@@ -44,13 +44,13 @@
   &__icons{
     text-decoration: none;
     color:white;
-      .icons{
-        color:white;
-        text-decoration: none;
-          .fa-cog{
-            padding-left: 5px;
-          }
+    .icons{
+      color:white;
+      text-decoration: none;
+      .fa-cog{
+        padding-left: 5px;
       }
+    }
   }
 }
 .chat-main{
@@ -61,88 +61,114 @@
   flex-direction: column;
   justify-content: space-between;
   &__group-info{
-  padding: 0 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    height:100px;
+    width:calc(100vw - 300px - 90px);
+    background-color: #fafafa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    &__left-group{
+      font-size: 20px;
+      margin-top: 35px;
+      &__menber-name{
+        font-size: 12px;
+        margin-top:15px;
+      }
+    }
+    &__right-group{
+      border: 1px solid skyblue;
+      text-align: center;
+      height:38px;
+      padding: 0px 20px;
+      line-height: 38px;
+    }
+    .edit{
+      text-decoration: none;
+      color:skyblue;
+    }
   }
-  &__name{
-  font-size: 20px;
-  margin-top: 35px;
+  .footer{
+    &__form{
+      align-items: center;
+      display: flex;
+      height:100px;
+      width:calc(100vw - 300px);
+      background-color: #d2d2d2;
+      &__message-window{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height:50px;
+        margin: 0 auto;
+        &__window{
+          padding:0 45px 0 15px;
+          color:gray;
+          width:calc(100vw - 500px);
+          background-color: white;
+          height:50px;
+          display: flex;
+          align-items: center;
+          border: none
+        }
+        &__image{
+          position: relative;
+          &__image-label{
+            position: absolute;
+            right:20px;
+            top: -13px;
+            font-size: 25px;
+            input{
+              display: none;
+            }
+          }
+          &__image-fie{
+            display: none;
+          }
+        }
+      }
+      &__send{
+        background-color: #38aef0;
+        width:100px;
+        height: 50px;
+        text-align: center;
+        margin-right: 40px;
+        border: none;
+        padding: 0 30px;
+        color:white;
+      }
+    }
   }
-  &__group-info{
-  width:calc(100vw - 300px);
-  height:100px;
-  background-color: #fafafa;
-  }
-  &__list{
-  font-size: 12px;
-  margin-top: 15px;
-  color:gray;
-  }
-  &__menber-name{
-  display: inline-block;
-  }
-  &__edit-btn{
-  border:1px solid skyblue;
-  line-height: 38px;
-  color:skyblue;
-  height:38px;
-  .edit{
-    text-decoration: none;
-    color:skyblue;
-    padding:12px 20px;
+  .chat-contents{
+    margin-top:50px;
+    height:calc(100vh - 100px - 100px);
+    overflow: scroll;
+    &__box{
+      display: flex;
+      margin-left: 46px;
+      font-size: 15px;
+      &__name{
+        margin-right: 15px;
+        font-style: bold;
+        color:green;
+        font-size: 20px;
+      }
+      &__content{
+        
+        color:pink;
+      }
+    }
+    &__date{
+      margin-left: 46px;
+      margin-bottom: 0px;
+      font-size: 15px;
+    }
+    &__text{
+      margin-left: 46px;
+      font-size: 15px;
     }
   }
 }
-
 .wrap{
   display: flex;
-}
-
-.footer{
-  width:calc(100vw - 300px);
-  height:100px;
-  background-color: #d2d2d2;
-  align-items: center;
-  display: flex;
-  &__message-window{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height:50px;
-  margin: 0 auto;
-  position: relative;
-  }
-  &__form-window{
-  padding:0 45px 0 15px;
-  color:gray;
-  width:calc(100vw - 500px);
-  background-color: white;
-  height:50px;
-  display: flex;
-  align-items: center;
-  }
-  &__send-btn{
-  background-color: #38aef0;
-  width:100px;
-  text-align: center;
-  margin-left: 15px;
-  list-style:none;
-  .Editlink{
-    text-decoration: none;
-    color:white;
-    height:50px;
-    padding: 20px 30px;
-    line-height: 50px;
-    }
-  }
-  .image-label{
-    position: absolute;
-    right:150px;
-    font-size: 25px;
-    input{
-      display: none;
-    }
-  }
 }

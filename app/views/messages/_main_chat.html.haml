@@ -1,22 +1,36 @@
 .chat-main
   .chat-main__group-info
-    .chat-main__name
-      techcamp
-      .chat-main__list
-        menber:
-        .chat-main__menber-name
-          chiaki
-
-    .chat-main__edit-btn
-      =link_to "#", class: "edit" do
+    .chat-main__group-info__left-group
+      = @group.name
+      .chat-main__group-info__left-group__menber-name
+        Menber:
+        - @group.users.each do |user|
+          = user.name
+    .chat-main__group-info__right-group
+      =link_to edit_group_path(@group), {class: "edit"} do
         Edit
+
+
+  .chat-contents
+    - @messages.each do |message|
+      .chat-contents__box
+        .chat-contents__box__name
+          = message.user.name
+        .chat-contents__box__content
+          = message.created_at.strftime('%Y年%m/%d %H:%M')
+      .chat-contents__date
+        = image_tag message.image.url if message.image.present?
+      .chat-contents__text
+        = message.content
+
+
+
+
   .footer
-    .footer__message-window
-      .footer__form-window
-        type a message
-      %label{class: "image-label"}
-        =icon('far', 'image')
-        %input{type: "file"}
-      .footer__send-btn
-        =link_to "#", class: "Editlink" do
-          Send
+    = form_with model: [@group, @message], html: {class: "footer__form"}, local: true do |f|
+      .footer__form__message-window
+        = f.text_field :content, class: 'footer__form__message-window__window', placeholder: 'type a message'
+        = f.label :image, class: 'footer__form__message-window__image' do
+          = icon('far', 'image', class: 'footer__form__message-window__image__image-label')
+          = f.file_field :image, class: 'footer__form__message-window__image__image-fie'
+      = f.submit 'Send', class: 'footer__form__send'
