@@ -14,20 +14,22 @@
   .chat-contents
     - @messages.each do |message|
       .chat-contents__box
-        .chat-contents__box__name
-          = message.user.name
-        .chat-contents__box__content
-          = message.created_at.strftime('%Y年%m/%d %H:%M')
-      .chat-contents__date
-        = image_tag message.image.url if message.image.present?
-      .chat-contents__text
-        = message.content
+        .chat-contents__box__top
+          .chat-contents__box__top__name
+            = message.user.name
+          .chat-contents__box__top__text
+            = message.content
+          .chat-contents__box__top__image
+            = image_tag message.image.url if message.image.present?
+        .chat-contents__box__bottom
+          .chat-contents__box__bottom__date
+            = message.created_at.strftime('%Y年%m/%d %H:%M')
 
 
 
 
   .footer
-    = form_with model: [@group, @message], html: {class: "footer__form"}, local: true do |f|
+    = form_with( model: [@group, @message], class: "footer__form", local: true ) do |f|
       .footer__form__message-window
         = f.text_field :content, class: 'footer__form__message-window__window', placeholder: 'type a message'
         = f.label :image, class: 'footer__form__message-window__image' do

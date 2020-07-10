@@ -12,7 +12,6 @@
   width: 50%;
   font-size: 14px;
   font-weight: 200;
-
   h2 {
     margin-bottom: 10px;
     letter-spacing: 3px;
@@ -62,7 +61,6 @@
     }
     .field_with_errors {
       position: relative;
-
       &:after {
         content: "";
         display: block;
