@@ -147,25 +147,31 @@
       display: flex;
       margin-left: 46px;
       font-size: 15px;
-      &__name{
-        margin-right: 15px;
-        font-style: bold;
-        color:green;
-        font-size: 20px;
+      height:150px;
+      width:calc(100vw - 300px - 80px);
+      &__top{
+        &__name{
+          margin-right: 15px;
+          font-style: bold;
+          color:green;
+          font-size: 20px;
+        }
+        &__text{
+          margin-left: 46px;
+          font-size: 15px;
+          height:50px;
+        }
+        &__image{
+          margin-left: 46px;
+          margin-bottom: 0px;
+          font-size: 15px;
+        }
       }
-      &__content{
-        
-        color:pink;
+      &__bottom{
+        &__date{
+          color:pink;
+        }
       }
-    }
-    &__date{
-      margin-left: 46px;
-      margin-bottom: 0px;
-      font-size: 15px;
-    }
-    &__text{
-      margin-left: 46px;
-      font-size: 15px;
     }
   }
 }
