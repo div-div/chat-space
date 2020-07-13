@@ -145,28 +145,30 @@
     height:calc(100vh - 100px - 100px);
     overflow: scroll;
     &__box{
-      display: flex;
       margin-left: 46px;
       font-size: 15px;
-      &__name{
-        margin-right: 15px;
-        font-style: bold;
-        color:green;
-        font-size: 20px;
+      flex-wrap: wrap;
+      &__top{
+        display: flex;
+        &__name{
+          margin-right: 15px;
+          font-style: bold;
+          color:green;
+          font-size: 20px;
+        }
+        &__date{
+          color:pink;
+        }
       }
-      &__content{
-
-        color:pink;
+      &__bottom{
+        &__text{
+          margin-left: 10px;
+          margin-bottom: 10px;
+          font-size: 20px;
+        }
+        &__image{
+        }
       }
-    }
-    &__date{
-      margin-left: 46px;
-      margin-bottom: 0px;
-      font-size: 15px;
-    }
-    &__text{
-      margin-left: 46px;
-      font-size: 15px;
     }
   }
 }
