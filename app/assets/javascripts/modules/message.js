@@ -11,7 +11,7 @@ $(function(){
                 ${message.created_at}
               </div>
             </div>
-            
+
             <div class="chat-contents__box__bottom">
               <div class="chat-contents__box__bottom__text">
                 ${message.content}
