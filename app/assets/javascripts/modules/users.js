@@ -39,7 +39,6 @@ $(function(){
       data: { keyword: input },
     })
     .done(function(users){
-
       $("#UserSearchResult").empty();
       if (users.length !== 0){
         users.forEach(function(user){
